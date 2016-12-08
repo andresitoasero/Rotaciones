@@ -1,0 +1,18 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd (12,11,5,4,3,2);
+char nombre[6]={'A','N','D','R','E','S'};
+int cont=0;
+void setup() {
+lcd.begin(16,2);
+}
+
+void loop() {
+for(cont;cont<6;cont++){
+  lcd.setCursor(cont,0);
+  lcd.print(nombre[cont]);
+  delay (300);
+  lcd.setCursor(cont,0);
+  lcd.print(' ');
+  delay(300);
+   }
+}
